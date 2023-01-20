@@ -8,6 +8,7 @@ export default function Aside() {
   return (
     <StyledAside>
       <p className="txt">VOCÊ RECEBERÁ</p>
+      <hr />
       <div className="info">
         <div className="days_div">
           {arrDays.map((day) => {

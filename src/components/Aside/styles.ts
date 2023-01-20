@@ -8,10 +8,14 @@ export const StyledAside = styled.aside`
     font-size: 16px;
     font-style: italic;
     font-weight: 700;
-    line-height: 20px;
-    text-align: left;
 
     color: #3d75bb;
+  }
+
+  hr {
+    height: 0.5px;
+    width: 150px;
+    border: 1px solid #5d9cec;
   }
 
   .info {

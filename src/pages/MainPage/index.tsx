@@ -5,7 +5,7 @@ import { MainDiv } from "./styles";
 export function MainPage() {
   return (
     <>
-      <MainDiv className="box">
+      <MainDiv>
         <Form></Form>
         <Aside></Aside>
       </MainDiv>

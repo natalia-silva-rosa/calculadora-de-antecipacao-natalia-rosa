@@ -34,9 +34,8 @@ export const CalculatorProvider = ({ children }: CalculatorProps) => {
       data.days = [1, 15, 30, 90];
     }
 
-    setArrDays(data.days);
     const response = await api.post<IForm>("", data);
-    const newArrResults = data.days.map((day, key) => {
+    const newArrResults = data.days.map((day) => {
       return response.data[day];
     });
     setArrResults(newArrResults);

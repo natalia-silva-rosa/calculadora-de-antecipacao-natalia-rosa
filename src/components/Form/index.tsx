@@ -1,5 +1,5 @@
 import { StyledForm } from "./styles";
-import * as yup from "yup";
+import { formSchema } from "../../validators/formSchema";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useContext } from "react";
@@ -7,13 +7,6 @@ import { CalculatorContext, IForm } from "../../contexts/CalculatorContext";
 
 export default function Form() {
   const { onSubmitFormFunction } = useContext(CalculatorContext);
-
-  const formSchema = yup.object().shape({
-    amount: yup.number().required(),
-    installments: yup.number().required().max(12),
-    mdr: yup.number().required(),
-    days: yup.array().optional().nullable(),
-  });
 
   const {
     register,
